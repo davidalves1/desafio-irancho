@@ -8,7 +8,12 @@ module.exports = (sequelize, DataTypes) => {
     ic_ativo: DataTypes.BOOLEAN
   }, {});
   Pessoa.associate = function(models) {
-    // associations can be defined here
+    Pessoa.hasMany(models.Animal, {
+      foreignKey: 'id_pessoa',
+      as: 'animais',
+      tableName: 'animais',
+      underscored: true,
+    })
   };
   return Pessoa;
 };
