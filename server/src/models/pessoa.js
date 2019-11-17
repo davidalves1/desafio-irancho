@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     endereco: DataTypes.TEXT,
     sexo: DataTypes.STRING,
     ic_ativo: DataTypes.BOOLEAN
-  }, {});
+  }, { underscored: true, tableName: 'pessoas' });
   Pessoa.associate = function(models) {
     Pessoa.hasMany(models.Animal, {
       foreignKey: 'id_pessoa',
