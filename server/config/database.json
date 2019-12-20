@@ -6,7 +6,12 @@
     "host": "irancho-db",
     "dialect": "mysql",
     "operatorsAliases": false,
-    "timezone": "-03:00"
+    "timezone": "-03:00",
+    "define": {
+      "timestamps": true,
+      "underscored": true,
+      "underscoredAll": true
+    }
   },
   "production": {
     "username": "root",
@@ -15,6 +20,11 @@
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false,
-    "timezone": "-03:00"
+    "timezone": "-03:00",
+    "define": {
+      "timestamps": true,
+      "underscored": true,
+      "underscoredAll": true
+    }
   }
 }
